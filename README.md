@@ -31,6 +31,7 @@ Publish the website in the given URL.
 
 ## PROGRAM :
 ### math.html
+```
 <html>
 <head>
 <meta charset='utf-8'>
@@ -90,9 +91,9 @@ Area :  <input type="text" name="area" value="{{area}}"></input>m<sup>2</sup><br
 </div>
 </body>
 </html>
-
+```
 ### urls.py
-
+```
 from django.contrib import admin
 from django.urls import path
 from myapp import views
@@ -104,9 +105,9 @@ urlpatterns = [
     path('',views.triarea,name="areaoftriangleroot")
 ]
 
-
+```
 ### views.py
-
+```
 from django.shortcuts import render
 def triarea(request):
     context={}
@@ -128,7 +129,7 @@ def triarea(request):
     return render(request,'myapp/math.html',context) 
 
 
-
+```
 ## SERVER SIDE PROCESSING:
 ![image](https://github.com/LavanyaMuraleedharan/MathServer/assets/120103862/26457f62-b051-4caf-a216-10a1ae05fd95)
 
